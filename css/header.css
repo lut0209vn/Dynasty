@@ -1,0 +1,169 @@
+/* header
+ -----------------------------------------------------*/
+.page-header {
+  position: relative;
+  height: 86px;
+  padding-top: 21px;
+}
+.page-header .bg-boder span {
+  width: 50%;
+  height: 2px;
+  display: block;
+  background: -webkit-gradient(linear, left top, right top, from(#b2aa6e), color-stop(80%, #FFF));
+  background: -webkit-linear-gradient(left, #b2aa6e, #FFF 80%);
+  background: -o-linear-gradient(left, #b2aa6e, #FFF 80%);
+  background: linear-gradient(to right, #b2aa6e, #FFF 80%);
+  position: absolute;
+}
+.page-header .bg-boder .bg-left {
+  left: 0px;
+  bottom: 0px;
+}
+.page-header .bg-boder .bg-right {
+  background: -webkit-gradient(linear, right top, left top, from(#b2aa6e), color-stop(88%, #FFF));
+  background: -webkit-linear-gradient(right, #b2aa6e, #FFF 88%);
+  background: -o-linear-gradient(right, #b2aa6e, #FFF 88%);
+  background: linear-gradient(to left, #b2aa6e, #FFF 88%);
+  right: 0px;
+  bottom: 0px;
+}
+.page-header .container {
+  position: relative;
+}
+.page-header .container .navbar-header {
+  position: absolute;
+  top: 6px;
+  left: 30px;
+}
+.page-header .container .navbar-header .navbar-toggle .icon-bar {
+  background: #b3aa6f;
+  width: 28px;
+  height: 4px;
+}
+.page-header .container .nav-main .nav-left {
+  float: left;
+}
+.page-header .container .nav-main .nav-right {
+  float: right;
+}
+.page-header .container .nav-main .nav-right .ctn-login a {
+  float: left;
+}
+.page-header .container .nav-main .nav-right .ctn-login .signup {
+  margin-right: 11px;
+}
+.page-header .container .nav-main .nav-right .ctn-login .signup:before {
+  content: "";
+  background: #c8c8c8;
+  width: 1px;
+  height: 15px;
+  display: inline-block;
+  position: absolute;
+  right: -11px;
+  top: 2px;
+}
+.page-header .container .nav-main .nav-right .ctn-login .login {
+  margin-left: 11px;
+}
+.page-header .container .nav-main li {
+  padding: 10px 16px;
+}
+.page-header .container .nav-main li a {
+  font-size: 14px;
+  text-transform: uppercase;
+  padding: 0px 0px;
+}
+.page-header .container .nav-main li a:hover {
+  cursor: pointer;
+  background: none;
+  color: red;
+}
+.page-header .container .nav-main li a:focus {
+  background: none;
+}
+.page-header .container .nav-main li .cart img {
+  width: 20px;
+  height: 18px;
+  margin-right: 8px;
+  margin-top: -5px;
+}
+.page-header .container .logo {
+  position: absolute;
+  left: 50%;
+  margin-left: -88px;
+  top: -5px;
+  width: 122px;
+  height: 98px;
+}
+.page-header .container .logo img {
+  width: 100%;
+}
+@media screen and (max-width: 1200px) {
+  .page-header .container .nav-main li {
+    padding: 10px 12px;
+  }
+}
+@media screen and (max-width: 1030px) {
+  .page-header .container {
+    padding: 0px 0px;
+  }
+  .page-header .container .logo {
+    width: 112px;
+    height: 88px;
+  }
+  .page-header .container .nav-main li {
+    padding: 10px 11px;
+  }
+  .page-header .container .nav-main li a {
+    font-size: 14px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .page-header .container {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 991px) {
+  .page-header {
+    display: block;
+    height: 70px;
+    padding-top: 0px;
+  }
+  .page-header .bg-boder .bg-right {
+    background: -webkit-gradient(linear, right top, left top, from(#b2aa6e), color-stop(80%, #FFF));
+    background: -webkit-linear-gradient(right, #b2aa6e, #FFF 80%);
+    background: -o-linear-gradient(right, #b2aa6e, #FFF 80%);
+    background: linear-gradient(to left, #b2aa6e, #FFF 80%);
+  }
+  .page-header .bg-boder .bg-left {
+    background: -webkit-gradient(linear, left top, right top, from(#b2aa6e), color-stop(80%, #FFF));
+    background: -webkit-linear-gradient(left, #b2aa6e, #FFF 80%);
+    background: -o-linear-gradient(left, #b2aa6e, #FFF 80%);
+    background: linear-gradient(to right, #b2aa6e, #FFF 80%);
+  }
+  .page-header .container .logo {
+    margin-left: -57px;
+    top: 7px;
+  }
+  .page-header .container .navbar-header .navbar-toggle {
+    display: block;
+    position: absolute;
+  }
+  .page-header .container .nav-main {
+    display: none;
+    position: absolute;
+    top: 70px;
+    left: 0px;
+  }
+  .page-header .container .nav-main .nav-left {
+    float: none;
+  }
+  .page-header .container .nav-main .nav-right {
+    float: none;
+  }
+  .page-header .container .nav-main .navbar-nav li {
+    display: block;
+    width: 100%;
+  }
+}
