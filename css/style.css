@@ -66,10 +66,22 @@ input[type="submit"] {
 
 /* header
  -----------------------------------------------------*/
+.show {
+  display: block;
+}
+
 .page-header {
   position: relative;
   height: 86px;
   padding-top: 21px;
+}
+.page-header .nav-mobile {
+  display: none;
+  background: #1a3669;
+  z-index: 999999;
+  position: absolute;
+  top: 100%;
+  width: 100%;
 }
 .page-header .bg-boder span {
   width: 50%;
@@ -190,11 +202,36 @@ input[type="submit"] {
     width: 100%;
   }
 }
+@media screen and (min-width: 992px) {
+  .page-header .nav-mobile {
+    display: none !important;
+  }
+}
 @media screen and (max-width: 991px) {
   .page-header {
     display: block;
     height: 70px;
     padding-top: 0px;
+  }
+  .page-header .nav-mobile {
+    display: none;
+  }
+  .page-header .nav-mobile ul {
+    margin: 0px;
+  }
+  .page-header .nav-mobile ul li {
+    border-bottom: 1px solid #FFF;
+    display: block;
+    width: 100%;
+  }
+  .page-header .nav-mobile ul li a {
+    color: #FFF;
+    padding: 10px 50px;
+    cursor: pointer;
+    text-transform: uppercase;
+  }
+  .page-header .nav-mobile ul li a:hover {
+    background: #4c689b;
   }
   .page-header .bg-boder .bg-right {
     background: -webkit-gradient(linear, right top, left top, from(#b2aa6e), color-stop(80%, #FFF));
@@ -218,24 +255,246 @@ input[type="submit"] {
   }
   .page-header .container .nav-main {
     display: none;
-    position: absolute;
-    top: 70px;
-    left: 0px;
-  }
-  .page-header .container .nav-main .nav-left {
-    float: none;
-  }
-  .page-header .container .nav-main .nav-right {
-    float: none;
-  }
-  .page-header .container .nav-main .navbar-nav li {
-    display: block;
-    width: 100%;
   }
 }
 /* footer
  -----------------------------------------------------*/
 /* module css 01
  -----------------------------------------------------*/
+.md-rating {
+  display: inline-block;
+  clear: both;
+}
+.md-rating span {
+  color: #1D1E1E;
+  font-family: "Open Sans";
+  font-size: 12px;
+  line-height: 12px;
+}
+.md-rating .left {
+  float: left;
+}
+.md-rating .left-text {
+  margin: 7px 0px 0px 6px;
+}
+.md-rating .center {
+  text-align: center;
+  display: block;
+}
+
+/* module slider ranger
+ -----------------------------------------------------*/
+.layout {
+  padding: 50px;
+  font-family: Georgia, serif;
+}
+
+.layout-slider {
+  margin-bottom: 60px;
+  width: 50%;
+}
+
+.layout-slider-settings {
+  font-size: 12px;
+  padding-bottom: 10px;
+}
+
+.layout-slider-settings pre {
+  font-family: Courier;
+}
+
+.md-slider-ranger .jslider .jslider-label-to {
+  display: none !important;
+}
+
+.md-slider-range {
+  display: inline-block;
+}
+
+.layout-slider {
+  display: inline-block;
+  width: auto;
+}
+
+.md-slider-ranger .jslider {
+  top: 0px;
+}
+
+.md-slider-ranger .jslider .jslider-label {
+  display: none !important;
+}
+
+.md-slider-ranger .jslider .jslider-value {
+  top: 17px;
+}
+.md-slider-ranger .jslider .jslider-value span {
+  position: relative;
+  color: #1D1E1E;
+  font-size: 14px;
+  z-index: 555;
+}
+
+.md-slider-ranger-2 .jslider .jslider-value span:before {
+  content: "SGD$\00a0";
+  display: inline-block;
+}
+
+.md-slider-ranger-2 .jslider .jslider-value-to span:before {
+  content: "SGD \00a0 $ \00a0";
+  display: inline-block;
+}
+
+.md-slider-ranger .jslider .jslider-pointer {
+  background: #00489f;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  top: -6px;
+}
+
+.md-slider-ranger .jslider .jslider-bg i {
+  background: #d8d8d8;
+  height: 1px;
+}
+
+.md-slider-ranger .jslider .jslider-bg .v {
+  background: #00489f;
+}
+
+/* module plus-minus
+ -----------------------------------------------------*/
+.md-plus-minus {
+  display: inline-block;
+}
+.md-plus-minus .btn-gr {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+}
+.md-plus-minus .btn-gr img {
+  width: 100%;
+}
+.md-plus-minus input[type="text"] {
+  width: 62px;
+  height: 42px;
+  border-radius: 5px;
+  text-align: center;
+  padding: 0px 5px;
+  border: 1px solid #d7d7d7;
+  margin: 0px 7px;
+}
+
+.md-ping {
+  background: #fbf9e7;
+}
+
+.md-price {
+  background: #fbf9e7;
+  padding: 107px 20px;
+  padding: 20px 20px;
+  display: inline-block;
+}
+.md-price span {
+  display: block;
+  color: #1D1E1E;
+  color: #000;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+.md-price .price {
+  font-size: 34px;
+  line-height: 34px;
+  margin-bottom: 5px;
+}
+
+.md-btn-group {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+.md-btn-group.btn-single a {
+  background: #00489f;
+}
+.md-btn-group .inner {
+  display: inline-block;
+}
+.md-btn-group a {
+  height: 40px;
+  display: inline-block;
+  padding: 7px 50px 0px 50px;
+  background: #234ba0;
+  border-radius: 25px;
+  color: #FFF;
+  margin-right: 40px;
+  min-width: 140px;
+}
+.md-btn-group a:last-child {
+  margin-right: 0px;
+}
+.md-btn-group .btn-blue {
+  background: #0b2961;
+}
+
+/* module md-get-prices
+ -----------------------------------------------------*/
+.md-get-prices {
+  cursor: pointer;
+  background: #0b2961;
+  width: 100%;
+  height: 40px;
+  display: inline-block;
+  color: #FFF;
+  padding: 8px 10px 0px 10px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+/* module md-rating-item
+ -----------------------------------------------------*/
+.md-rating-item {
+  padding: 47px 0px 28px;
+}
+.md-rating-item h3 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #1D1E1E;
+  margin: 0px 0px 0px;
+}
+.md-rating-item .code {
+  display: block;
+  color: #1D1E1E;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+/* module slider item
+ -----------------------------------------------------*/
+.md-item-slider {
+  border-radius: 8px;
+  width: 406px;
+  border: 1px solid #d8d8d8;
+  display: inline-block;
+}
+.md-item-slider .top-img img {
+  width: 100%;
+  height: 185px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+.md-item-slider .price-item .md-rating-item {
+  width: 59%;
+  float: left;
+}
+.md-item-slider .price-item .md-price {
+  width: 41%;
+  float: left;
+  padding: 55px 20px;
+}
+
 /* module css 02
  -----------------------------------------------------*/

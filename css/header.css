@@ -1,9 +1,21 @@
 /* header
  -----------------------------------------------------*/
+.show {
+  display: block;
+}
+
 .page-header {
   position: relative;
   height: 86px;
   padding-top: 21px;
+}
+.page-header .nav-mobile {
+  display: none;
+  background: #1a3669;
+  z-index: 999999;
+  position: absolute;
+  top: 100%;
+  width: 100%;
 }
 .page-header .bg-boder span {
   width: 50%;
@@ -124,11 +136,36 @@
     width: 100%;
   }
 }
+@media screen and (min-width: 992px) {
+  .page-header .nav-mobile {
+    display: none !important;
+  }
+}
 @media screen and (max-width: 991px) {
   .page-header {
     display: block;
     height: 70px;
     padding-top: 0px;
+  }
+  .page-header .nav-mobile {
+    display: none;
+  }
+  .page-header .nav-mobile ul {
+    margin: 0px;
+  }
+  .page-header .nav-mobile ul li {
+    border-bottom: 1px solid #FFF;
+    display: block;
+    width: 100%;
+  }
+  .page-header .nav-mobile ul li a {
+    color: #FFF;
+    padding: 10px 50px;
+    cursor: pointer;
+    text-transform: uppercase;
+  }
+  .page-header .nav-mobile ul li a:hover {
+    background: #4c689b;
   }
   .page-header .bg-boder .bg-right {
     background: -webkit-gradient(linear, right top, left top, from(#b2aa6e), color-stop(80%, #FFF));
@@ -152,18 +189,5 @@
   }
   .page-header .container .nav-main {
     display: none;
-    position: absolute;
-    top: 70px;
-    left: 0px;
-  }
-  .page-header .container .nav-main .nav-left {
-    float: none;
-  }
-  .page-header .container .nav-main .nav-right {
-    float: none;
-  }
-  .page-header .container .nav-main .navbar-nav li {
-    display: block;
-    width: 100%;
   }
 }
