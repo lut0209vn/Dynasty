@@ -456,7 +456,7 @@ input[type="submit"] {
 /* module md-rating-item
  -----------------------------------------------------*/
 .md-rating-item {
-  padding: 47px 0px 28px;
+  padding: 47px 20px 28px 20px;
 }
 .md-rating-item h3 {
   font-size: 24px;
@@ -494,6 +494,19 @@ input[type="submit"] {
   width: 41%;
   float: left;
   padding: 55px 20px;
+}
+
+/* module slider homepage
+ -----------------------------------------------------*/
+.owl-slider-1.owl-carousel .owl-stage {
+  margin-left: -250px;
+}
+.owl-slider-1 .md-item-slider {
+  margin-left: 40px;
+}
+.owl-slider-1 .md-rating img {
+  width: auto;
+  display: inline-block;
 }
 
 /* module css 02

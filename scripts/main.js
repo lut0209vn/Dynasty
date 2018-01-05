@@ -41,7 +41,7 @@ jQuery("#Slider2").slider({
   step: 1,
   smooth: true, round: 0,
   dimension: "",
-  skin: "plastic" ,
+  skin: "plastic"
 });
 
 $("#btn-minus").click(function(){
@@ -58,4 +58,25 @@ $("#btn-plus").click(function(){
 });
 
 //slider homepage
-$(".owl-slider-1").owlCarousel();
+$(".owl-slider-1").owlCarousel({
+  loop: true,
+  autoWidth:true,
+  responsive:{
+       0:{
+           items:1,
+           nav:true,
+           autoWidth:false,
+       },
+       768:{
+           items:1,
+           nav:true,
+           loop:true,
+           autoWidth:false,
+       },
+       992:{
+           items:3,
+           nav:true,
+           loop:true
+       }
+   }
+});
