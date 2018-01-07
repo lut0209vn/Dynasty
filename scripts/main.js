@@ -58,25 +58,58 @@ $("#btn-plus").click(function(){
 });
 
 //slider homepage
-$(".owl-slider-1").owlCarousel({
-  loop: true,
-  autoWidth:true,
-  responsive:{
-       0:{
-           items:1,
-           nav:true,
-           autoWidth:false,
-       },
-       768:{
-           items:1,
-           nav:true,
-           loop:true,
-           autoWidth:false,
-       },
-       992:{
-           items:3,
-           nav:true,
-           loop:true
-       }
-   }
+$('.md-slider-1').slick({
+  centerMode: true,
+  centerPadding: '60px',
+  slidesToShow: 3,
+  arrows: true,
+  speed: 700,
+  dots: false,
+  infinite: true,
+  autoplay:true,
+  autoplaySpeed:3000,
+  responsive: [
+
+    {
+      breakpoint: 1100,
+      settings: {
+        arrows: true,
+        centerMode: true,
+        centerPadding: '40px',
+        slidesToShow: 3,
+        infinite: true
+      }
+    },
+    {
+      breakpoint: 992,
+      settings: {
+        arrows: false,
+        centerMode: true,
+        centerPadding: '40px',
+        slidesToShow: 2,
+        infinite: true
+      }
+    },
+    {
+      breakpoint: 700,
+      settings: {
+        arrows: false,
+        centerPadding: '0px',
+        centerMode: true,
+        slidesToShow: 2,
+        infinite: true,
+        dots:true
+      }
+    },
+    {
+      breakpoint:699,
+      settings: {
+        arrows: false,
+        centerMode: false,
+        slidesToShow: 1,
+        infinite: true,
+        dots:true
+      }
+    }
+  ]
 });
