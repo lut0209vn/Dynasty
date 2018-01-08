@@ -1,11 +1,16 @@
 'use strict';
+/* ==========================================================================
+navbar-toggle
+========================================================================== */
 $(".navbar-toggle").click(function(){
   $(".nav-mobile").stop().slideToggle();
 });
 if( $(window).width()> 992){
   $(".nav-mobile").css("display","none");
 }
-// ratting
+/* ==========================================================================
+rating
+========================================================================== */
 /* HELPER: Checks Whether an Element Exists
 ----------------------------------------------------------------------------------------------------*/
 (function( $ ) {
@@ -26,8 +31,10 @@ $('.md-rating-3').raty({ score: 3 });
 $('.md-rating-4').raty({ score: 4 });
 $('.md-rating-5').raty({ score: 5 });
 
-// slider ranger
- jQuery("#Slider1").slider({
+/* ==========================================================================
+slider-ranger
+========================================================================== */
+jQuery("#Slider1").slider({
    from: 0,
     to: 10000,
    step: 1,
@@ -43,7 +50,9 @@ jQuery("#Slider2").slider({
   dimension: "",
   skin: "plastic"
 });
-
+/* ==========================================================================
+minus-plus
+========================================================================== */
 $("#btn-minus").click(function(){
   var a=parseInt(document.getElementById("value-input").value)
   if(a>1){
@@ -57,58 +66,96 @@ $("#btn-plus").click(function(){
     document.getElementById("value-input").value=a;
 });
 
-//slider homepage
-$('.md-slider-1').slick({
+/* ==========================================================================
+slider 3 home page
+========================================================================== */
+$('.slider3').slick({
   centerMode: true,
-  centerPadding: '60px',
+  centerPadding: '40px',
   slidesToShow: 3,
   arrows: true,
   speed: 700,
   dots: false,
-  infinite: true,
-  autoplay:true,
+  autoplay:false,
   autoplaySpeed:3000,
   responsive: [
-
     {
-      breakpoint: 1100,
+      breakpoint: 992,
       settings: {
         arrows: true,
         centerMode: true,
         centerPadding: '40px',
-        slidesToShow: 3,
+        slidesToShow: 2,
         infinite: true
       }
     },
+    {
+      breakpoint: 768,
+      settings: {
+        arrows: true,
+        centerPadding: '20px',
+        centerMode: true,
+        slidesToShow: 2,
+        infinite: true,
+        dots:false
+      }
+    },
+    {
+      breakpoint:510,
+      settings: {
+        arrows: true,
+        centerMode: true,
+        centerPadding: '20px',
+        slidesToShow: 1,
+        infinite: true,
+        dots:false
+      }
+    }
+  ]
+});
+/* ==========================================================================
+slider 1 home page
+========================================================================== */
+$('.slider1').slick({
+  centerMode: true,
+  centerPadding: '19%',
+  slidesToShow: 1,
+  arrows: true,
+  speed: 700,
+  dots: false,
+  autoplay:false,
+  autoplaySpeed:3000,
+  responsive: [
     {
       breakpoint: 992,
       settings: {
-        arrows: false,
+        arrows: true,
         centerMode: true,
-        centerPadding: '40px',
-        slidesToShow: 2,
+        centerPadding: '7%',
+        slidesToShow: 1,
         infinite: true
       }
     },
     {
-      breakpoint: 700,
+      breakpoint: 768,
       settings: {
-        arrows: false,
-        centerPadding: '0px',
+        arrows: true,
+        centerPadding: '7%',
         centerMode: true,
-        slidesToShow: 2,
+        slidesToShow: 1,
         infinite: true,
-        dots:true
+        dots:false
       }
     },
     {
-      breakpoint:699,
+      breakpoint: 600,
       settings: {
-        arrows: false,
-        centerMode: false,
+        arrows: true,
+        centerPadding: '10%',
+        centerMode: true,
         slidesToShow: 1,
         infinite: true,
-        dots:true
+        dots:false
       }
     }
   ]

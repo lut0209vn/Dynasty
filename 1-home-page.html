@@ -15,6 +15,7 @@
   <link  href="vendor/slick/slick-theme.css" rel="stylesheet" type="text/css">
   <link  href="vendor/owl/owl.carousel.min.css" rel="stylesheet" type="text/css">
   <link  href="vendor/owl/owl.theme.default.min.css" rel="stylesheet" type="text/css">
+  <link  href="vendor/semantic/semantic.min.css" rel="stylesheet" type="text/css">
   <link  href="css/style.css" rel="stylesheet" media="screen">
   <link  href="css/layout-hompage.css" rel="stylesheet" media="screen">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
@@ -23,10 +24,6 @@
 <body>
 
 <header class="page-header navbar navbar-fixed-top custom-navbar">
-  <div class="bg-boder">
-    <span class="bg-left"></span>
-    <span class="bg-right"></span>
-  </div><!-- .bg-boder -->
   <div class="nav-mobile">
     <ul class="nav navbar-nav">
       <li><a href="#">Tours</a></li>
@@ -44,6 +41,10 @@
     </ul><!--.nav-left -->
   </div><!-- .nav-destop -->
   <div class="container clearfix">
+    <div class="bg-boder">
+      <span class="bg-left"></span>
+      <span class="bg-right"></span>
+    </div><!-- .bg-boder -->
     <div class="navbar-header">
 			<button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
 				<span class="icon icon-bar"></span>
@@ -79,7 +80,20 @@
 
 
 <main class="page-main">
-  
+  <section id="search">
+    <div class="container">
+      <form class="search-form" action="index.html" method="post">
+        
+        <div class="search-tours">
+          <select class="ui dropdown">
+            <option value="">Gender</option>
+            <option value="1">Male</option>
+            <option value="0">Female</option>
+          </select>
+        </div><!-- .search-tours -->
+      </form>
+    </div><!-- .container -->
+  </section><!-- .#serarch -->
 </main>
 <!-- /.page-main -->
 
@@ -99,6 +113,7 @@
 <script src="vendor/slider/draggable-0.1.js"></script>
 <script src="vendor/slider/jquery.slider.js"></script>
 <script src="vendor/owl/owl.carousel.min.js"></script>
+<script src="vendor/semantic/semantic.min.js"></script>
 <script src="scripts/main.js"></script>
 </body>
 </html>
