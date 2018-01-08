@@ -1,2 +1,65 @@
 /* sass css 01
  -----------------------------------------------------*/
+.page-main {
+  position: relative;
+}
+
+.amcharts-chart-div a {
+  display: none !important;
+}
+
+#map-chart {
+  width: 500px;
+  height: 500px;
+}
+
+#select {
+  font-size: 15px;
+}
+
+#search .search-tours {
+  background: #00489f;
+  display: inline-block;
+  float: left;
+  padding: 0px 20px;
+  -webkit-transform: skew(-25deg);
+      -ms-transform: skew(-25deg);
+       -o-transform: skew(-25deg);
+          transform: skew(-25deg);
+}
+#search .search-tours .icon-search {
+  float: left;
+  width: 18px;
+  height: 18px;
+}
+#search .select-map .ico-location {
+  float: left;
+  display: inline-block;
+}
+#search .select-map #get-info {
+  float: left;
+  opacity: 0.9;
+}
+#search .select-map #get-info span {
+  padding: 5px 25px 5px 15px;
+  border-radius: 16px;
+  min-width: 115px;
+  display: inline-block;
+  font-size: 14px;
+  color: #272828;
+  border: 1px solid #d7d7d7;
+  position: relative;
+}
+#search .select-map #get-info span:before {
+  content: "";
+  background: url(../images/ico-close-1.png) no-repeat;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  display: block;
+  top: 10px;
+  right: 10px;
+}
+#search .select-map .ico-remove-location {
+  float: left;
+}

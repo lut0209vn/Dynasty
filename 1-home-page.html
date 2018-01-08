@@ -83,17 +83,40 @@
   <section id="search">
     <div class="container">
       <form class="search-form" action="index.html" method="post">
-        
         <div class="search-tours">
+          <img class="icon-search" src="images/icon-search.png" alt="">
           <select class="ui dropdown">
             <option value="">Gender</option>
             <option value="1">Male</option>
             <option value="0">Female</option>
           </select>
         </div><!-- .search-tours -->
+        <div class="select-map">
+          <img class="ico-location" src="images/ico-location.png" alt="">
+          <div id="get-info"><span onclick="myFunction()">aaaaq</span></div><!-- .get-info -->
+          <img class="ico-remove-location"src="images/ico-remove-location.png" alt="">
+          <!-- <select onchange="selectArea(this);" id="select">
+              <option value="">Destination</option>
+              <optgroup label="Europe">
+                <option value="FR">France</option>
+                <option value="DE">Germany</option>
+                <option value="ES">Spain</option>
+              </optgroup>
+              <optgroup label="Middle East">
+                <option value="AE">UAE</option>
+                <option value="IR">Iran</option>
+                <option value="IQ">Iraq</option>
+              </optgroup>
+          </select> -->
+        </div><!-- .select-map -->
       </form>
     </div><!-- .container -->
   </section><!-- .#serarch -->
+  <div class="container">
+    <div id="map-chart">
+
+    </div>
+  </div><!-- .container -->
 </main>
 <!-- /.page-main -->
 
@@ -114,6 +137,9 @@
 <script src="vendor/slider/jquery.slider.js"></script>
 <script src="vendor/owl/owl.carousel.min.js"></script>
 <script src="vendor/semantic/semantic.min.js"></script>
+<script src="https://www.amcharts.com/lib/3/ammap.js"></script>
+<script src="https://www.amcharts.com/lib/3/maps/js/worldLow.js"></script>
+<script src="https://www.amcharts.com/lib/3/themes/light.js"></script>
 <script src="scripts/main.js"></script>
 </body>
 </html>

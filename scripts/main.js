@@ -160,3 +160,31 @@ $('.slider1').slick({
     }
   ]
 });
+/* ==========================================================================
+select map
+========================================================================== */
+var map = AmCharts.makeChart("map-chart", {
+
+  "type": "map",
+  "theme": "light",
+
+  "dataProvider": {
+    "map": "worldLow",
+    "getAreasFromMap": true
+  },
+  "areasSettings": {
+    "autoZoom": false,
+    "selectedColor": "#CC0000",
+    "selectable": true
+  }
+});
+
+map.addListener("clickMapObject", function(event) {
+  document.getElementById("get-info").innerHTML += '<span class="remove" onclick="myFunction()">'+event.mapObject.title +'</span>';
+});
+
+    $("a[title='JavaScript charts']").remove();
+
+function myFunction(e){
+  $(event.target).remove();
+}
