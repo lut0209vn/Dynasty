@@ -163,6 +163,7 @@ $('.slider1').slick({
 /* ==========================================================================
 select map
 ========================================================================== */
+$(".chosen-select-no-single").chosen({disable_search_threshold: 10});
 var map = AmCharts.makeChart("map-chart", {
 
   "type": "map",
@@ -174,16 +175,36 @@ var map = AmCharts.makeChart("map-chart", {
   },
   "areasSettings": {
     "autoZoom": false,
-    "selectedColor": "#CC0000",
+    "color": "#a8a8a8",
+    "selectedColor": "#00489f",
     "selectable": true
-  }
+  },
+  "listeners": [{
+    "event": "clickMapObject",
+    "method": function(event) {
+      // deselect the area by assigning all of the dataProvider as selected object
+      map.selectedObject = map.dataProvider;
+
+      if (event.mapObject.showAsSelected == false || typeof event.mapObject.showAsSelected == 'undefined') {
+        event.mapObject.showAsSelected = true;
+      } else if (event.mapObject.showAsSelected == true && event.mapObject.selectedColorReal == "#5EB7DE") {
+        event.mapObject.selectedColorReal = "#CC0000";
+      } else {
+        event.mapObject.showAsSelected = false;
+        event.mapObject.selectedColorReal = "#5EB7DE"
+        map.returnInitialColor(event.mapObject);
+      }
+    }
+  }],
 });
 
 map.addListener("clickMapObject", function(event) {
   document.getElementById("get-info").innerHTML += '<span class="remove" onclick="myFunction()">'+event.mapObject.title +'</span>';
+  $(".ico-add-location").css("display","block");
+  $(".destination").remove();
 });
 
-    $("a[title='JavaScript charts']").remove();
+$("a[title='JavaScript charts']").remove();
 
 function myFunction(e){
   $(event.target).remove();

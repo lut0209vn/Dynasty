@@ -14,8 +14,12 @@
   <link  href="vendor/slick/slick.css" rel="stylesheet" type="text/css">
   <link  href="vendor/slick/slick-theme.css" rel="stylesheet" type="text/css">
   <link  href="vendor/owl/owl.carousel.min.css" rel="stylesheet" type="text/css">
-  <link  href="vendor/owl/owl.theme.default.min.css" rel="stylesheet" type="text/css">
   <link  href="vendor/semantic/semantic.min.css" rel="stylesheet" type="text/css">
+  <link  href="vendor/owl/owl.theme.default.min.css" rel="stylesheet" type="text/css">
+  <link  href="vendor/jquery-ui/jquery-ui.css" rel="stylesheet" type="text/css">
+  <link  href="vendor/chosen/chosen.css" rel="stylesheet" type="text/css">
+  <link  href="vendor/chosen/docsupport/prism.css" rel="stylesheet" type="text/css">
+  <link  href="vendor/chosen/docsupport/style.css" rel="stylesheet" type="text/css">
   <link  href="css/style.css" rel="stylesheet" media="screen">
   <link  href="css/layout-hompage.css" rel="stylesheet" media="screen">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
@@ -83,32 +87,33 @@
   <section id="search">
     <div class="container">
       <form class="search-form" action="index.html" method="post">
-        <div class="search-tours">
-          <img class="icon-search" src="images/icon-search.png" alt="">
-          <select class="ui dropdown">
-            <option value="">Gender</option>
-            <option value="1">Male</option>
-            <option value="0">Female</option>
-          </select>
-        </div><!-- .search-tours -->
-        <div class="select-map">
-          <img class="ico-location" src="images/ico-location.png" alt="">
-          <div id="get-info"><span onclick="myFunction()">aaaaq</span></div><!-- .get-info -->
-          <img class="ico-remove-location"src="images/ico-remove-location.png" alt="">
-          <!-- <select onchange="selectArea(this);" id="select">
-              <option value="">Destination</option>
-              <optgroup label="Europe">
-                <option value="FR">France</option>
-                <option value="DE">Germany</option>
-                <option value="ES">Spain</option>
-              </optgroup>
-              <optgroup label="Middle East">
-                <option value="AE">UAE</option>
-                <option value="IR">Iran</option>
-                <option value="IQ">Iraq</option>
-              </optgroup>
-          </select> -->
-        </div><!-- .select-map -->
+        <ul class="skewed clearfix">
+          <li>
+            <div class="search-tours skewed-revert">
+              <div class="icon-search">
+                <img src="images/icon-search.png" alt="">
+              </div><!-- .icon-search -->
+              <select data-placeholder="Your Favorite Type of Bear" class="chosen-select-no-single" tabindex="10">
+                <option value=""></option>
+                <option selected>Tours</option>
+                <option>Tours</option>
+                <option>Asiatic Black Bear</option>
+                <option>Brown Bear</option>
+                <option>Giant Panda</option>
+                <option disabled>Sun Bear</option>
+              </select>
+            </div><!-- .search-tours -->
+          </li>
+          <li class="clearfix">
+            <div class="select-map skewed-revert">
+              <img class="ico-location" src="images/ico-location.png" alt="">
+              <span class="destination">Destination</span>
+              <div id="get-info"></div><!-- .get-info -->
+              <img class="ico-add-location"src="images/ico-add-location.png" alt="">
+            </div><!-- .select-map -->
+          </li>
+
+        </ul>
       </form>
     </div><!-- .container -->
   </section><!-- .#serarch -->
@@ -137,6 +142,10 @@
 <script src="vendor/slider/jquery.slider.js"></script>
 <script src="vendor/owl/owl.carousel.min.js"></script>
 <script src="vendor/semantic/semantic.min.js"></script>
+<script src="vendor/jquery-ui/jquery-ui.js"></script>
+<script src="vendor/chosen/chosen.jquery.js"></script>
+<script src="vendor/chosen/docsupport/prism.js"></script>
+<script src="vendor/chosen/docsupport/init.js"></script>
 <script src="https://www.amcharts.com/lib/3/ammap.js"></script>
 <script src="https://www.amcharts.com/lib/3/maps/js/worldLow.js"></script>
 <script src="https://www.amcharts.com/lib/3/themes/light.js"></script>
