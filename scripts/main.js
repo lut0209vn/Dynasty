@@ -76,7 +76,7 @@ $('.slider3').slick({
   arrows: true,
   speed: 700,
   dots: false,
-  autoplay:false,
+  autoplay:true,
   autoplaySpeed:3000,
   responsive: [
     {
@@ -123,7 +123,7 @@ $('.slider1').slick({
   arrows: true,
   speed: 700,
   dots: false,
-  autoplay:false,
+  autoplay:true,
   autoplaySpeed:3000,
   responsive: [
     {
@@ -163,7 +163,40 @@ $('.slider1').slick({
 /* ==========================================================================
 select map
 ========================================================================== */
-$(".chosen-select-no-single").chosen({disable_search_threshold: 10});
+$(".chosen-select-no-results1").chosen();
+$(".chosen-select-no-results").chosen().change(function(){
+  var ctn=$('li.search-choice').length;
+  $('li.search-choice div').remove();
+  $('li.search-choice').last().append('<div></div>');
+  $(".search-choice-close").click(function(){
+    $('li.search-choice').last().append('<div></div>');
+  });
+  $(".chosen-drop").hide();
+  $(".chosen-choices").click(function(){
+    if($('li.search-choice').length==2){
+      alert("is not chose more 2 item");
+    }
+  });
+
+  $("input").focus(function(){
+    if($('li.search-choice').length==2){
+      $(".chosen-drop").hide();
+    }else{
+      $(".chosen-drop").show();
+    }
+  });
+  $(".chosen-choices").focus(function(){
+    if($('li.search-choice').length==2){
+      $(".chosen-drop").hide();
+    }else {
+      $(".chosen-drop").show();
+    }
+  });
+  $(".search-choice span").click(false);
+  // $(".search-choice div").click(function(){
+  //   $(".chosen-drop").css("clip","auto");
+  // });
+});
 var map = AmCharts.makeChart("map-chart", {
 
   "type": "map",
@@ -199,13 +232,20 @@ var map = AmCharts.makeChart("map-chart", {
 });
 
 map.addListener("clickMapObject", function(event) {
-  document.getElementById("get-info").innerHTML += '<span class="remove" onclick="myFunction()">'+event.mapObject.title +'</span>';
-  $(".ico-add-location").css("display","block");
-  $(".destination").remove();
+  $("#get-info span").innerHTML += '<span class="remove" onclick="myFunction()">'+event.mapObject.title +'</span>';
+  // $(".ico-add-location").css("display","block");
 });
 
 $("a[title='JavaScript charts']").remove();
 
-function myFunction(e){
-  $(event.target).remove();
-}
+$(".icon-close-map").click(function(){
+  $("#chose-map").css("display","none");
+  $(".bg-modal").css("display","none");
+});
+$(".ico-location").click(function(){
+  $("#chose-map").css("display","block");
+  $(".bg-modal").css("display","block");
+});
+
+
+$(".month_year").datepicker();

@@ -88,12 +88,12 @@
     <div class="container">
       <form class="search-form" action="index.html" method="post">
         <ul class="skewed clearfix">
-          <li>
+          <li class="li-outer">
             <div class="search-tours skewed-revert">
               <div class="icon-search">
                 <img src="images/icon-search.png" alt="">
               </div><!-- .icon-search -->
-              <select data-placeholder="Your Favorite Type of Bear" class="chosen-select-no-single" tabindex="10">
+              <select data-placeholder="Your Favorite Type of Bear" class="chosen-select-no-single" tabindex="10"style="visibility: hidden">
                 <option value=""></option>
                 <option selected>Tours</option>
                 <option>Tours</option>
@@ -104,26 +104,67 @@
               </select>
             </div><!-- .search-tours -->
           </li>
-          <li class="clearfix">
+          <li class="clearfix li-outer">
             <div class="select-map skewed-revert">
-              <img class="ico-location" src="images/ico-location.png" alt="">
-              <span class="destination">Destination</span>
-              <div id="get-info"></div><!-- .get-info -->
+              <div class="ico-location" data-toggle="modal" data-target="#ModalSelectMap">
+                <img src="images/ico-location.png" alt="">
+              </div>
+              <span class="destination"></span>
+              <div id="get-info">
+                <select data-placeholder="destination" multiple class="chzn-select chosen-select-no-results" tabindex="1" style="visibility: hidden">
+                  <option value=""></option>
+                  <option>American</option>
+                  <option>Malaysia</option>
+                  <option>VietN</option>
+                  <option>Giant Panda</option>
+                </select>
+              </div><!-- #get-info -->
               <img class="ico-add-location"src="images/ico-add-location.png" alt="">
             </div><!-- .select-map -->
           </li>
-
+          <li class="clearfix li-outer">
+            <div class="datepicker skewed-revert">
+              <img src="images/ico-datepicker.png" alt="">
+              <input type="text" class="month_year" placeholder="Date">
+            </div><!-- .datepicker -->
+          </li>
         </ul>
       </form>
     </div><!-- .container -->
-  </section><!-- .#serarch -->
-  <div class="container">
-    <div id="map-chart">
-
-    </div>
-  </div><!-- .container -->
+  </section><!-- #search -->
+<!-- Modal -->
+<div class="modal fade" id="ModalSelectMap" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal">&times;</button>
+      <div class="search-map">
+        <select data-placeholder="search......" multiple class="chosen-select-no-results1" tabindex="11" style="visibility: hidden" value="1">
+          <option value=""></option>
+          <option>American</option>
+          <option>Malaysia</option>
+          <option>VietN</option>
+          <option>Giant Panda</option>
+          <option>Sloth Bear</option>
+          <option>Sun Bear</option>
+          <option>Polar Bear</option>
+          <option>Spectacled Bear</option>
+        </select>
+      </div><!-- .search-map -->
+      <div class="popular-select">
+        <span class="title">Popular destinations</span>
+        <span>Korea</span>
+        <span>Taiwan</span>
+        <span>China</span>
+        <span>Hong Kong</span>
+        <span>Dubai</span>
+      </div><!-- .popular-select -->
+    </div><!-- .modal-header -->
+    <div id="map-chart"></div><!-- #map-chart -->
+  </div>
 </main>
 <!-- /.page-main -->
+
+
 
 <footer class="page-footer">
   

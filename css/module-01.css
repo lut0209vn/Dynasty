@@ -76,7 +76,7 @@ module slider ranger
   position: relative;
   color: #1D1E1E;
   font-size: 14px;
-  z-index: 555;
+  z-index: 55;
 }
 
 .md-slider-ranger-2 .jslider .jslider-value span:before {
@@ -577,6 +577,10 @@ item slider-3
 /* ==========================================================================
 #slider3
 ========================================================================== */
+#slider3, #slider1 {
+  z-index: 0;
+  margin-top: 50px;
+}
 #slider3.container, #slider1.container {
   width: 100%;
   position: relative;
@@ -588,7 +592,7 @@ item slider-3
   height: 15px;
   left: 95%;
   top: -35px;
-  z-index: 9999;
+  z-index: 9;
   display: block;
 }
 .slider-control .slick-next:before {
