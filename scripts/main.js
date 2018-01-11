@@ -76,7 +76,7 @@ $('.slider3').slick({
   arrows: true,
   speed: 700,
   dots: false,
-  autoplay:true,
+  autoplay:false,
   autoplaySpeed:3000,
   responsive: [
     {
@@ -116,6 +116,7 @@ $('.slider3').slick({
 /* ==========================================================================
 slider 1 home page
 ========================================================================== */
+
 $('.slider1').slick({
   centerMode: true,
   centerPadding: '19%',
@@ -123,7 +124,7 @@ $('.slider1').slick({
   arrows: true,
   speed: 700,
   dots: false,
-  autoplay:true,
+  autoplay:false,
   autoplaySpeed:3000,
   responsive: [
     {
@@ -161,41 +162,116 @@ $('.slider1').slick({
   ]
 });
 /* ==========================================================================
+.slider2
+========================================================================== */
+$('.slider2').owlCarousel({
+    stagePadding: 150,
+    smartSpeed:1100,
+    loop:true,
+    margin:10,
+    nav:false,
+    items:1,
+
+    nav:true,
+  // responsive:{
+  //       0:{
+  //           items:1,
+  //           stagePadding: 60
+  //       },
+  //       600:{
+  //           items:1,
+  //           stagePadding: 100
+  //       },
+  //       1000:{
+  //           items:1,
+  //           stagePadding: 200
+  //       },
+  //       1200:{
+  //           items:1,
+  //           stagePadding: 250
+  //       },
+  //       1400:{
+  //           items:1,
+  //           stagePadding: 300
+  //       },
+  //       1600:{
+  //           items:1,
+  //           stagePadding: 350
+  //       },
+  //       1800:{
+  //           items:1,
+  //           stagePadding: 400
+  //       }
+  //   }
+})
+/* ==========================================================================
+search map
+========================================================================== */
+
+   var availableTags = [
+     "ActionScript",
+     "AppleScript",
+     "Asp",
+     "BASIC",
+     "C",
+     "C++",
+     "Clojure",
+     "COBOL",
+     "ColdFusion",
+     "Erlang",
+     "Fortran",
+     "Groovy",
+     "Haskell",
+     "Java",
+     "JavaScript",
+     "Lisp",
+     "Perl",
+     "PHP",
+     "Python",
+     "Ruby",
+     "Scala",
+     "Scheme"
+   ];
+   $( "#seach-select" ).autocomplete({
+     source: availableTags
+   });
+   $( "#seach-select" ).focus(function(){
+
+   });
+/* ==========================================================================
 select map
 ========================================================================== */
 $(".chosen-select-no-results1").chosen();
-$(".chosen-select-no-results").chosen().change(function(){
+$(".chosen-select-map").chosen().change(function(){
   var ctn=$('li.search-choice').length;
-  $('li.search-choice div').remove();
-  $('li.search-choice').last().append('<div></div>');
-  $(".search-choice-close").click(function(){
-    $('li.search-choice').last().append('<div></div>');
+  $('.chosen-select-map li.search-choice div').remove();
+  $('#get-info li.search-choice div').remove();
+  $('#get-info li.search-choice').last().append('<div></div>');
+  $("#get-info .search-choice-close").click(function(){
+    $('#get-info li.search-choice').last().append('<div></div>');
   });
-  $(".chosen-drop").hide();
-  $(".chosen-choices").click(function(){
-    if($('li.search-choice').length==2){
+  $("#get-info .chosen-drop").hide();
+  $("#get-info .chosen-choices").click(function(){
+    if($('#get-info li.search-choice').length==2){
       alert("is not chose more 2 item");
     }
   });
 
   $("input").focus(function(){
-    if($('li.search-choice').length==2){
-      $(".chosen-drop").hide();
+    if($('#get-info li.search-choice').length==2){
+      $("#get-info .chosen-drop").hide();
     }else{
-      $(".chosen-drop").show();
+      $("#get-info .chosen-drop").show();
     }
   });
-  $(".chosen-choices").focus(function(){
-    if($('li.search-choice').length==2){
-      $(".chosen-drop").hide();
+  $("#get-info .chosen-choices").focus(function(){
+    if($('#get-info li.search-choice').length==2){
+      $("#get-info .chosen-drop").hide();
     }else {
-      $(".chosen-drop").show();
+      $("#get-info .chosen-drop").show();
     }
   });
-  $(".search-choice span").click(false);
-  // $(".search-choice div").click(function(){
-  //   $(".chosen-drop").css("clip","auto");
-  // });
+  $("#get-info .search-choice span").click(false);
 });
 var map = AmCharts.makeChart("map-chart", {
 

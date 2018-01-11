@@ -4,6 +4,10 @@ body {
   position: relative;
 }
 
+.ui-autocomplete {
+  z-index: 111061 !important;
+}
+
 #ModalSelectMap {
   position: absolute;
   background: #FFF;
@@ -198,7 +202,7 @@ body {
   opacity: 1;
   width: 300px;
 }
-#search .select-map #get-info .chosen-select-no-results {
+#search .select-map #get-info .chosen-select-map {
   width: 270px;
 }
 #search .select-map #get-info .chosen-container .chosen-choices {
@@ -320,4 +324,86 @@ body {
 #map-chart {
   width: 500px;
   height: 500px;
+}
+
+#slider2 .owl-item.active .item-slider-2 {
+  padding: 0px 2%;
+}
+#slider2 .item-slider-2 {
+  height: 350px;
+  width: 100%;
+  padding: 32px 2%;
+}
+#slider2 .item-slider-2 .inner {
+  position: relative;
+  height: 100%;
+  border: 2px solid #b2a96d;
+  border-radius: 9px;
+}
+#slider2 .item-slider-2 .inner .thumb-nail {
+  border-top: 8px solid #0254a6;
+  border-radius: 7px;
+  overflow: hidden;
+  height: 100%;
+}
+#slider2 .item-slider-2 .inner .thumb-nail img {
+  height: 100%;
+  width: 100%;
+  border-radius: 0px;
+}
+#slider2 .item-slider-2 .inner .info {
+  position: absolute;
+  left: 25px;
+  bottom: 21px;
+  color: #FFF;
+}
+#slider2 .item-slider-2 .inner .info h3 {
+  font-family: "Open Sans";
+  font-size: 40px;
+  font-weight: bold;
+  line-height: 44px;
+  margin-bottom: 19px;
+}
+#slider2 .item-slider-2 .inner .info .Upcoming {
+  font-family: "Open Sans";
+  font-size: 18px;
+  line-height: 18px;
+  margin-bottom: 17px;
+}
+#slider2 .item-slider-2 .inner .info .Upcoming span {
+  font-weight: bold;
+}
+#slider2 .item-slider-2 .inner .info .date li {
+  margin: 0px;
+  float: left;
+  display: inline-block;
+  padding: 0px 10px;
+  position: relative;
+}
+#slider2 .item-slider-2 .inner .info .date li:first-child {
+  padding-left: 0px;
+}
+#slider2 .item-slider-2 .inner .info .date li.before {
+  content: "";
+  height: 18px;
+  width: 1px;
+  background: #FFF;
+  display: inline-block;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+}
+#slider2 .slick-dots {
+  bottom: -46px;
+}
+#slider2 .slick-dots li {
+  margin: 0px 3px;
+}
+#slider2 .slick-dots li button:before {
+  font-size: 17px;
+  color: #dadada;
+}
+#slider2 .slick-dots li.slick-active button:before {
+  font-size: 17px;
+  color: #b2a96d;
 }

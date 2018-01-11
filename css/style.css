@@ -846,20 +846,23 @@ item slider-3
 /* ==========================================================================
 #slider3
 ========================================================================== */
-#slider3, #slider1 {
+#slider1, #slider2, #slider3 {
   z-index: 0;
   margin-top: 50px;
 }
-#slider3.container, #slider1.container {
-  width: 100%;
-  position: relative;
-  padding: 0px;
+@media screen and (max-width: 1325px) {
+  #slider1.container, #slider2.container, #slider3.container {
+    width: 100%;
+    position: relative;
+    padding: 0px;
+  }
 }
 
 .slider-control .slick-next {
+  position: absolute;
   width: 9px;
   height: 15px;
-  left: 95%;
+  right: 30px;
   top: -35px;
   z-index: 9;
   display: block;
@@ -873,8 +876,9 @@ item slider-3
 }
 .slider-control .slick-prev {
   position: absolute;
-  left: 92%;
+  right: 50px !important;
   top: -35px;
+  left: auto;
 }
 .slider-control .slick-prev:before {
   content: "";
@@ -884,53 +888,6 @@ item slider-3
   display: block;
 }
 
-@media screen and (max-width: 1300px) {
-  .slider-control .slick-next {
-    left: 95%;
-  }
-  .slider-control .slick-prev {
-    left: 92%;
-  }
-}
-@media screen and (max-width: 1100px) {
-  .slider-control .slick-next {
-    left: 95%;
-  }
-  .slider-control .slick-prev {
-    left: 92%;
-  }
-}
-@media screen and (max-width: 991px) {
-  .slider-control .slick-next {
-    left: 95%;
-  }
-  .slider-control .slick-prev {
-    left: 91%;
-  }
-}
-@media screen and (max-width: 768px) {
-  .slider-control .slick-next {
-    top: -20px;
-    left: 95%;
-  }
-  .slider-control .slick-prev {
-    left: 89%;
-    top: -20px;
-  }
-}
-@media screen and (max-width: 450px) {
-  .slider-control .slick-next {
-    left: 95%;
-  }
-  .slider-control .slick-prev {
-    left: 88%;
-  }
-}
-@media screen and (max-width: 768px) {
-  .slider-control .item-slider-3 {
-    margin: 0px 10px;
-  }
-}
 @media screen and (max-width: 500px) {
   .slider-control .item-slider-3 {
     width: 100%;
@@ -951,7 +908,7 @@ module md-big-info
   height: 300px;
   width: 33.33333%;
   display: inline-block;
-  border-radius: 15px;
+  border-radius: 10px;
   overflow: hidden;
   border: 1px solid #d8d8d8;
 }
@@ -998,6 +955,8 @@ module md-big-info
 #slider1,slider-item-1
 ========================================================================== */
 .slider-item-1 {
+  float: left;
+  display: inline-block;
   position: relative;
   padding: 0px 0.14%;
 }
@@ -1005,7 +964,7 @@ module md-big-info
   float: left;
 }
 .slider-item-1 .right-img {
-  border-radius: 15px;
+  border-radius: 10px;
   overflow: hidden;
   width: 66.6666%;
   height: 300px;
