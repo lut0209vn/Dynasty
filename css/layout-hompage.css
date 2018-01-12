@@ -8,50 +8,78 @@ body {
   z-index: 111061 !important;
 }
 
-#ModalSelectMap {
-  position: absolute;
+#ModalSelectMap .modal-dialog {
+  position: relative;
   background: #FFF;
-  width: 900px;
-  height: 580px;
-  z-index: 99999;
+  padding-top: 27px;
+}
+#ModalSelectMap .modal-dialog .modal-header {
+  padding-top: 0px;
+  padding-bottom: 0px;
+  border: none;
+}
+#ModalSelectMap .modal-dialog .modal-header .close {
+  position: absolute;
+  right: 22px;
+  top: 27px;
+  display: block;
   opacity: 1;
+  width: 40px;
+  height: 40px;
+}
+#ModalSelectMap .modal-dialog .modal-header .close span {
+  text-indent: 9999px;
+}
+#ModalSelectMap .modal-dialog .search-map .ui.search {
+  width: 502px;
+}
+#ModalSelectMap .modal-dialog .search-map .ui.search .ui.input {
+  position: relative;
+  width: 502px;
+  margin: 0 auto;
+}
+#ModalSelectMap .modal-dialog .search-map .ui.search .ui.icon.input input[type="text"] {
+  padding-left: 40px;
+  width: 502px;
+  height: 42px;
+  border: 1px solid #D7D7D7;
+}
+#ModalSelectMap .modal-dialog .search-map .ui.search .ui.icon.input .icon {
   position: absolute;
   top: 0px;
-  left: 50%;
-  margin-left: -450px;
+  width: 30px;
+  height: 30px;
 }
-#ModalSelectMap .search-map .chosen-select-no-results1 {
-  width: 500px;
+#ModalSelectMap .modal-dialog .search-map .ui.search .ui.icon.input .icon img {
+  margin: 12px 0px 0px 11px;
 }
-#ModalSelectMap .search-map .chosen-results {
-  width: 500px;
+#ModalSelectMap .modal-dialog .search-map .ui.search .results {
+  width: 462px;
+  border: 1px solid #D7D7D7;
+  border-radius: 11px;
+  background-color: #FFFFFF;
 }
-#ModalSelectMap .search-map .chosen-results li {
-  background: #ededed;
-}
-#ModalSelectMap .search-map .chosen-container-multi .chosen-choices {
-  padding: 6px 10px 6px 40px;
+#ModalSelectMap .modal-dialog .search-map .ui.search .results a {
   position: relative;
-  height: 40px;
-  width: 500px;
-  border-radius: 20px;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  border: 1px solid #d7d7d7;
-  background: #FFF;
+  overflow: visible;
 }
-#ModalSelectMap .search-map .chosen-container-multi .chosen-choices:before {
+#ModalSelectMap .modal-dialog .search-map .ui.search .results a:first-child:before {
   content: "";
-  background: url(../images/ico-search-map.png) no-repeat;
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  background: #FFF;
   position: absolute;
-  left: 9px;
-  top: 12px;
-  display: block;
-  width: 19px;
-  height: 18px;
-  cursor: pointer;
+  border-left: 1px solid #D7D7D7;
+  border-top: 1px solid #D7D7D7;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+       -o-transform: rotate(45deg);
+          transform: rotate(45deg);
+  top: -5px;
+  left: 10%;
 }
-#ModalSelectMap .icon-close-map {
+#ModalSelectMap .modal-dialog .icon-close-map {
   position: absolute;
   right: 25px;
   top: 18px;
@@ -227,9 +255,10 @@ body {
   width: 26px;
   height: 26px;
   position: absolute;
-  right: -30px;
+  right: -38px;
   top: 0px;
   cursor: pointer;
+  z-index: 999;
 }
 #search .select-map #get-info .chosen-container .chosen-choices .search-choice span {
   position: relative;
@@ -326,10 +355,47 @@ body {
   height: 500px;
 }
 
+@-webkit-keyframes flipInX {
+  from {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 180deg);
+            transform: perspective(400px) rotate3d(1, 0, 0, 180deg);
+  }
+  to {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 0deg);
+            transform: perspective(400px) rotate3d(1, 0, 0, 0deg);
+  }
+}
+
+@-o-keyframes flipInX {
+  from {
+    transform: perspective(400px) rotate3d(1, 0, 0, 180deg);
+  }
+  to {
+    transform: perspective(400px) rotate3d(1, 0, 0, 0deg);
+  }
+}
+
+@keyframes flipInX {
+  from {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 180deg);
+            transform: perspective(400px) rotate3d(1, 0, 0, 180deg);
+  }
+  to {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 0deg);
+            transform: perspective(400px) rotate3d(1, 0, 0, 0deg);
+  }
+}
 #slider2 .owl-item.active .item-slider-2 {
   padding: 0px 2%;
+  -webkit-transition-duration: 0.3s;
+       -o-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+  -webkit-transition-delay: 0.5s;
+       -o-transition-delay: 0.5s;
+          transition-delay: 0.5s;
 }
 #slider2 .item-slider-2 {
+  opacity: 1;
   height: 350px;
   width: 100%;
   padding: 32px 2%;

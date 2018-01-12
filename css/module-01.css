@@ -226,6 +226,297 @@ module rating item
 }
 
 /* ==========================================================================
+#slider3
+========================================================================== */
+#slider3 .owl-carousel .owl-item .md-rating img {
+  display: inline-block;
+  width: auto;
+}
+
+#slider1, #slider2, #slider3 {
+  margin-top: 150px;
+}
+@media screen and (max-width: 1325px) {
+  #slider1.container, #slider2.container, #slider3.container {
+    width: 100%;
+    position: relative;
+    padding: 0px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .slider-control .item-slider-3 {
+    width: 100%;
+    margin: 0px 10px;
+  }
+}
+/* ==========================================================================
+module md-big-info
+========================================================================== */
+.inner-content-boder {
+  border-top: 10px solid #0254a6;
+  height: 300px;
+  border-bottom: 5px solid #b2a96d;
+}
+
+.md-big-info {
+  position: relative;
+  height: 300px;
+  width: 33.33333%;
+  display: inline-block;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #d8d8d8;
+}
+.md-big-info .inner {
+  padding: 15px 7px 0px 10px;
+}
+.md-big-info .info span {
+  font-size: 14px;
+  float: left;
+  margin-left: 10px;
+  color: #272828;
+}
+.md-big-info .info span:first-child {
+  margin-left: 0px;
+}
+.md-big-info .info .price {
+  line-height: 1.4;
+  font-size: 34px;
+  font-weight: 600;
+}
+.md-big-info .info .taxes {
+  margin-top: 20px;
+}
+.md-big-info h3 {
+  display: block;
+  color: #272828;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 30px;
+  margin: 22px 0px 6px 0px;
+}
+.md-big-info .duration {
+  font-size: 16px;
+  font-weight: 600;
+  color: #272828;
+}
+.md-big-info .md-rating {
+  position: absolute;
+  bottom: 25px;
+  left: 10px;
+}
+.md-big-info .md-rating img {
+  display: inline-block;
+  width: auto;
+}
+
+/* ==========================================================================
+#slider1,item-slider-1
+========================================================================== */
+.owl-control {
+  position: relative;
+}
+.owl-control .owl-prev {
+  position: absolute;
+  right: 103px;
+  top: -55px;
+  text-indent: -9999px;
+}
+.owl-control .owl-prev:after {
+  content: "";
+  width: 9px;
+  height: 15px;
+  background: url(../images/ico-prev.png) no-repeat;
+  display: block;
+  position: absolute;
+  top: 0px;
+}
+.owl-control .owl-next {
+  position: absolute;
+  right: 71px;
+  top: -55px;
+  text-indent: -9999px;
+}
+.owl-control .owl-next:after {
+  content: "";
+  width: 9px;
+  height: 15px;
+  background: url(../images/ico-next.png) no-repeat;
+  display: block;
+  position: absolute;
+  top: 0px;
+}
+
+.item-slider-1 {
+  float: left;
+  display: inline-block;
+  position: relative;
+  padding: 0px 30px;
+}
+.item-slider-1 .md-big-info {
+  float: left;
+}
+.item-slider-1 .right-img {
+  border-radius: 10px;
+  overflow: hidden;
+  width: 66.6666%;
+  height: 300px;
+  float: right;
+  display: inline-block;
+}
+.item-slider-1 .right-img img {
+  width: 100%;
+  height: 100%;
+}
+
+@media screen and (max-width: 1150px) {
+  .slider1 .item-slider-1 {
+    padding: 0px 15px;
+  }
+  .slider1 .item-slider-1 .md-big-info {
+    float: left;
+  }
+  .slider1 .item-slider-1 .md-big-info .inner .title {
+    margin: 10px 0px 6px 0px;
+    font-size: 22px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .slider1 .item-slider-1 {
+    padding: 0px 15px;
+  }
+  .slider1 .item-slider-1 .md-big-info {
+    float: left;
+  }
+  .slider1 .item-slider-1 .md-big-info .inner .info span {
+    font-size: 12px;
+  }
+  .slider1 .item-slider-1 .md-big-info .inner .info .fr {
+    margin-right: 5px;
+  }
+  .slider1 .item-slider-1 .md-big-info .inner .info .price {
+    font-size: 25px;
+    margin-left: 0px;
+  }
+  .slider1 .item-slider-1 .md-big-info .inner .info .taxes {
+    margin: 13px 0px 0px 5px;
+  }
+  .slider1 .item-slider-1 .md-big-info .inner .title {
+    margin: 12px 0px 6px 0px;
+    font-size: 22px;
+    line-height: 22px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .slider1 .item-slider-1 {
+    padding: 0px 10px;
+  }
+  .slider1 .item-slider-1 .inner-content-boder {
+    height: 250px;
+  }
+  .slider1 .item-slider-1 .md-big-info {
+    height: 250px;
+    float: left;
+  }
+  .slider1 .item-slider-1 .md-big-info .inner {
+    padding: 10px 7px 0px 10px;
+  }
+  .slider1 .item-slider-1 .md-big-info .inner .info span {
+    font-size: 12px;
+  }
+  .slider1 .item-slider-1 .md-big-info .inner .info .fr {
+    margin-right: 5px;
+  }
+  .slider1 .item-slider-1 .md-big-info .inner .info .price {
+    font-size: 25px;
+    margin-left: 0px;
+  }
+  .slider1 .item-slider-1 .md-big-info .inner .info .taxes {
+    margin: 13px 0px 0px 5px;
+  }
+  .slider1 .item-slider-1 .md-big-info .inner .title {
+    margin: 12px 0px 6px 0px;
+    font-size: 16px;
+    line-height: 22px;
+    line-height: 22px;
+    margin-bottom: 0px;
+  }
+  .slider1 .item-slider-1 .md-big-info .inner .duration {
+    font-size: 14px;
+  }
+  .slider1 .item-slider-1 .md-big-info .inner .md-rating {
+    bottom: 15px;
+  }
+  .slider1 .item-slider-1 .right-img {
+    height: 250px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .slider1 .item-slider-1 {
+    padding: 0px 10px;
+  }
+  .slider1 .item-slider-1 .inner-content-boder {
+    height: 250px;
+  }
+  .slider1 .item-slider-1 .md-big-info {
+    height: 150px;
+    width: 100%;
+    float: none;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+  }
+  .slider1 .item-slider-1 .md-big-info .inner-content-boder {
+    height: 150px;
+  }
+  .slider1 .item-slider-1 .md-big-info .inner {
+    padding: 10px 7px 0px 10px;
+    border-top: none;
+  }
+  .slider1 .item-slider-1 .md-big-info .inner .info span {
+    font-size: 12px;
+  }
+  .slider1 .item-slider-1 .md-big-info .inner .info .fr {
+    margin-right: 5px;
+  }
+  .slider1 .item-slider-1 .md-big-info .inner .info .price {
+    font-size: 25px;
+    margin-left: 0px;
+  }
+  .slider1 .item-slider-1 .md-big-info .inner .info .taxes {
+    margin: 13px 0px 0px 5px;
+  }
+  .slider1 .item-slider-1 .md-big-info .inner .title {
+    margin: 12px 0px 6px 0px;
+    font-size: 16px;
+    line-height: 16px;
+    margin-bottom: 0px;
+  }
+  .slider1 .item-slider-1 .md-big-info .inner .duration {
+    font-size: 14px;
+  }
+  .slider1 .item-slider-1 .md-big-info .inner .md-rating {
+    position: relative;
+    left: 0px;
+    bottom: 0px;
+    display: block;
+  }
+  .slider1 .item-slider-1 .md-big-info .inner .md-rating .md-rating-5 {
+    display: inline-block;
+  }
+  .slider1 .item-slider-1 .right-img {
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    float: right;
+    width: 100%;
+    height: 150px;
+  }
+  .slider1 .item-slider-1 .right-img .inner-content-boder {
+    height: 150px;
+    border-bottom: none;
+  }
+}
+/* ==========================================================================
 item slider-3
 ========================================================================== */
 .item-slider-3 {
@@ -344,7 +635,7 @@ item slider-3
   width: 100%;
 }
 .slider3 .item-slider-3 {
-  margin: 0px 20px;
+  margin: 0px 15px;
   width: auto;
 }
 
@@ -572,284 +863,5 @@ item slider-3
   }
   .item-slider-3 .price-item .md-info-price .price {
     font-size: 14px;
-  }
-}
-/* ==========================================================================
-#slider3
-========================================================================== */
-#slider1, #slider2, #slider3 {
-  z-index: 0;
-  margin-top: 50px;
-}
-@media screen and (max-width: 1325px) {
-  #slider1.container, #slider2.container, #slider3.container {
-    width: 100%;
-    position: relative;
-    padding: 0px;
-  }
-}
-
-.slider-control .slick-next {
-  position: absolute;
-  width: 9px;
-  height: 15px;
-  right: 30px;
-  top: -35px;
-  z-index: 9;
-  display: block;
-}
-.slider-control .slick-next:before {
-  content: "";
-  background: url(../images/ico-next.png) no-repeat;
-  width: 9px;
-  height: 15px;
-  display: block;
-}
-.slider-control .slick-prev {
-  position: absolute;
-  right: 50px !important;
-  top: -35px;
-  left: auto;
-}
-.slider-control .slick-prev:before {
-  content: "";
-  background: url(../images/ico-prev.png) no-repeat;
-  width: 9px;
-  height: 15px;
-  display: block;
-}
-
-@media screen and (max-width: 500px) {
-  .slider-control .item-slider-3 {
-    width: 100%;
-    margin: 0px 10px;
-  }
-}
-/* ==========================================================================
-module md-big-info
-========================================================================== */
-.inner-content-boder {
-  border-top: 10px solid #0254a6;
-  height: 300px;
-  border-bottom: 5px solid #b2a96d;
-}
-
-.md-big-info {
-  position: relative;
-  height: 300px;
-  width: 33.33333%;
-  display: inline-block;
-  border-radius: 10px;
-  overflow: hidden;
-  border: 1px solid #d8d8d8;
-}
-.md-big-info .inner {
-  padding: 15px 7px 0px 10px;
-}
-.md-big-info .info span {
-  font-size: 14px;
-  float: left;
-  margin-left: 10px;
-  color: #272828;
-}
-.md-big-info .info span:first-child {
-  margin-left: 0px;
-}
-.md-big-info .info .price {
-  line-height: 1.4;
-  font-size: 34px;
-  font-weight: 600;
-}
-.md-big-info .info .taxes {
-  margin-top: 20px;
-}
-.md-big-info h3 {
-  display: block;
-  color: #272828;
-  font-size: 24px;
-  font-weight: 600;
-  line-height: 30px;
-  margin: 22px 0px 6px 0px;
-}
-.md-big-info .duration {
-  font-size: 16px;
-  font-weight: 600;
-  color: #272828;
-}
-.md-big-info .md-rating {
-  position: absolute;
-  bottom: 25px;
-  left: 10px;
-}
-
-/* ==========================================================================
-#slider1,slider-item-1
-========================================================================== */
-.slider-item-1 {
-  float: left;
-  display: inline-block;
-  position: relative;
-  padding: 0px 0.14%;
-}
-.slider-item-1 .md-big-info {
-  float: left;
-}
-.slider-item-1 .right-img {
-  border-radius: 10px;
-  overflow: hidden;
-  width: 66.6666%;
-  height: 300px;
-  float: right;
-  display: inline-block;
-}
-.slider-item-1 .right-img img {
-  width: 100%;
-  height: 100%;
-}
-
-@media screen and (max-width: 1150px) {
-  .slider1 .slider-item-1 {
-    padding: 0px 0.12%;
-  }
-  .slider1 .slider-item-1 .md-big-info {
-    float: left;
-  }
-  .slider1 .slider-item-1 .md-big-info .inner .title {
-    margin: 10px 0px 6px 0px;
-    font-size: 22px;
-  }
-}
-@media screen and (max-width: 991px) {
-  .slider1 .slider-item-1 {
-    padding: 0px 0.13%;
-  }
-  .slider1 .slider-item-1 .md-big-info {
-    float: left;
-  }
-  .slider1 .slider-item-1 .md-big-info .inner .info span {
-    font-size: 12px;
-  }
-  .slider1 .slider-item-1 .md-big-info .inner .info .fr {
-    margin-right: 5px;
-  }
-  .slider1 .slider-item-1 .md-big-info .inner .info .price {
-    font-size: 25px;
-    margin-left: 0px;
-  }
-  .slider1 .slider-item-1 .md-big-info .inner .info .taxes {
-    margin: 13px 0px 0px 5px;
-  }
-  .slider1 .slider-item-1 .md-big-info .inner .title {
-    margin: 12px 0px 6px 0px;
-    font-size: 22px;
-    line-height: 22px;
-  }
-}
-@media screen and (max-width: 800px) {
-  .slider1 .slider-item-1 {
-    padding: 0px 0.12%;
-  }
-  .slider1 .slider-item-1 .inner-content-boder {
-    height: 250px;
-  }
-  .slider1 .slider-item-1 .md-big-info {
-    height: 250px;
-    float: left;
-  }
-  .slider1 .slider-item-1 .md-big-info .inner {
-    padding: 10px 7px 0px 10px;
-  }
-  .slider1 .slider-item-1 .md-big-info .inner .info span {
-    font-size: 12px;
-  }
-  .slider1 .slider-item-1 .md-big-info .inner .info .fr {
-    margin-right: 5px;
-  }
-  .slider1 .slider-item-1 .md-big-info .inner .info .price {
-    font-size: 25px;
-    margin-left: 0px;
-  }
-  .slider1 .slider-item-1 .md-big-info .inner .info .taxes {
-    margin: 13px 0px 0px 5px;
-  }
-  .slider1 .slider-item-1 .md-big-info .inner .title {
-    margin: 12px 0px 6px 0px;
-    font-size: 16px;
-    line-height: 22px;
-    line-height: 22px;
-    margin-bottom: 0px;
-  }
-  .slider1 .slider-item-1 .md-big-info .inner .duration {
-    font-size: 14px;
-  }
-  .slider1 .slider-item-1 .md-big-info .inner .md-rating {
-    bottom: 15px;
-  }
-  .slider1 .slider-item-1 .right-img {
-    height: 250px;
-  }
-}
-@media screen and (max-width: 600px) {
-  .slider1 .slider-item-1 {
-    padding: 0px 0.22%;
-  }
-  .slider1 .slider-item-1 .inner-content-boder {
-    height: 250px;
-  }
-  .slider1 .slider-item-1 .md-big-info {
-    height: 150px;
-    width: 100%;
-    float: none;
-    border-top-left-radius: 0px;
-    border-top-right-radius: 0px;
-  }
-  .slider1 .slider-item-1 .md-big-info .inner-content-boder {
-    height: 150px;
-  }
-  .slider1 .slider-item-1 .md-big-info .inner {
-    padding: 10px 7px 0px 10px;
-    border-top: none;
-  }
-  .slider1 .slider-item-1 .md-big-info .inner .info span {
-    font-size: 12px;
-  }
-  .slider1 .slider-item-1 .md-big-info .inner .info .fr {
-    margin-right: 5px;
-  }
-  .slider1 .slider-item-1 .md-big-info .inner .info .price {
-    font-size: 25px;
-    margin-left: 0px;
-  }
-  .slider1 .slider-item-1 .md-big-info .inner .info .taxes {
-    margin: 13px 0px 0px 5px;
-  }
-  .slider1 .slider-item-1 .md-big-info .inner .title {
-    margin: 12px 0px 6px 0px;
-    font-size: 16px;
-    line-height: 16px;
-    margin-bottom: 0px;
-  }
-  .slider1 .slider-item-1 .md-big-info .inner .duration {
-    font-size: 14px;
-  }
-  .slider1 .slider-item-1 .md-big-info .inner .md-rating {
-    position: relative;
-    left: 0px;
-    bottom: 0px;
-    display: block;
-  }
-  .slider1 .slider-item-1 .md-big-info .inner .md-rating .md-rating-5 {
-    display: inline-block;
-  }
-  .slider1 .slider-item-1 .right-img {
-    border-bottom-left-radius: 0px;
-    border-bottom-right-radius: 0px;
-    float: right;
-    width: 100%;
-    height: 150px;
-  }
-  .slider1 .slider-item-1 .right-img .inner-content-boder {
-    height: 150px;
-    border-bottom: none;
   }
 }

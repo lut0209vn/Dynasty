@@ -66,197 +66,62 @@ $("#btn-plus").click(function(){
     document.getElementById("value-input").value=a;
 });
 
-/* ==========================================================================
-slider 3 home page
-========================================================================== */
-$('.slider3').slick({
-  centerMode: true,
-  centerPadding: '40px',
-  slidesToShow: 3,
-  arrows: true,
-  speed: 700,
-  dots: false,
-  autoplay:false,
-  autoplaySpeed:3000,
-  responsive: [
-    {
-      breakpoint: 992,
-      settings: {
-        arrows: true,
-        centerMode: true,
-        centerPadding: '40px',
-        slidesToShow: 2,
-        infinite: true
-      }
-    },
-    {
-      breakpoint: 768,
-      settings: {
-        arrows: true,
-        centerPadding: '20px',
-        centerMode: true,
-        slidesToShow: 2,
-        infinite: true,
-        dots:false
-      }
-    },
-    {
-      breakpoint:510,
-      settings: {
-        arrows: true,
-        centerMode: true,
-        centerPadding: '20px',
-        slidesToShow: 1,
-        infinite: true,
-        dots:false
-      }
-    }
-  ]
-});
-/* ==========================================================================
-slider 1 home page
-========================================================================== */
 
-$('.slider1').slick({
-  centerMode: true,
-  centerPadding: '19%',
-  slidesToShow: 1,
-  arrows: true,
-  speed: 700,
-  dots: false,
-  autoplay:false,
-  autoplaySpeed:3000,
-  responsive: [
-    {
-      breakpoint: 992,
-      settings: {
-        arrows: true,
-        centerMode: true,
-        centerPadding: '7%',
-        slidesToShow: 1,
-        infinite: true
-      }
-    },
-    {
-      breakpoint: 768,
-      settings: {
-        arrows: true,
-        centerPadding: '7%',
-        centerMode: true,
-        slidesToShow: 1,
-        infinite: true,
-        dots:false
-      }
-    },
-    {
-      breakpoint: 600,
-      settings: {
-        arrows: true,
-        centerPadding: '10%',
-        centerMode: true,
-        slidesToShow: 1,
-        infinite: true,
-        dots:false
-      }
-    }
-  ]
-});
+
 /* ==========================================================================
-.slider2
+slider  home page
 ========================================================================== */
+$('.slider1').owlCarousel({
+  stagePadding: 150,
+  smartSpeed:700,
+  loop:true,
+  margin:10,
+  nav:false,
+  items:1,
+  nav:true,
+});
 $('.slider2').owlCarousel({
     stagePadding: 150,
-    smartSpeed:1100,
+    smartSpeed:200,
     loop:true,
     margin:10,
     nav:false,
     items:1,
-
     nav:true,
-  // responsive:{
-  //       0:{
-  //           items:1,
-  //           stagePadding: 60
-  //       },
-  //       600:{
-  //           items:1,
-  //           stagePadding: 100
-  //       },
-  //       1000:{
-  //           items:1,
-  //           stagePadding: 200
-  //       },
-  //       1200:{
-  //           items:1,
-  //           stagePadding: 250
-  //       },
-  //       1400:{
-  //           items:1,
-  //           stagePadding: 300
-  //       },
-  //       1600:{
-  //           items:1,
-  //           stagePadding: 350
-  //       },
-  //       1800:{
-  //           items:1,
-  //           stagePadding: 400
-  //       }
-  //   }
-})
-/* ==========================================================================
-search map
-========================================================================== */
 
-   var availableTags = [
-     "ActionScript",
-     "AppleScript",
-     "Asp",
-     "BASIC",
-     "C",
-     "C++",
-     "Clojure",
-     "COBOL",
-     "ColdFusion",
-     "Erlang",
-     "Fortran",
-     "Groovy",
-     "Haskell",
-     "Java",
-     "JavaScript",
-     "Lisp",
-     "Perl",
-     "PHP",
-     "Python",
-     "Ruby",
-     "Scala",
-     "Scheme"
-   ];
-   $( "#seach-select" ).autocomplete({
-     source: availableTags
-   });
-   $( "#seach-select" ).focus(function(){
+});
+$('.slider3').owlCarousel({
+  stagePadding: 60,
+  smartSpeed:370,
+  loop:true,
+  margin:10,
+  nav:false,
+  items:3,
+  nav:true,
+});
 
-   });
 /* ==========================================================================
 select map
 ========================================================================== */
 $(".chosen-select-no-results1").chosen();
 $(".chosen-select-map").chosen().change(function(){
   var ctn=$('li.search-choice').length;
-  $('.chosen-select-map li.search-choice div').remove();
+  $('#get-info .chosen-select-map li.search-choice div').remove();
   $('#get-info li.search-choice div').remove();
   $('#get-info li.search-choice').last().append('<div></div>');
   $("#get-info .search-choice-close").click(function(){
     $('#get-info li.search-choice').last().append('<div></div>');
   });
-  $("#get-info .chosen-drop").hide();
   $("#get-info .chosen-choices").click(function(){
     if($('#get-info li.search-choice').length==2){
       alert("is not chose more 2 item");
     }
   });
-
+  if($('#get-info li.search-choice').length>0){
+    $("#get-info .chosen-search-input").show();
+  }else{
+    $("#get-info .chosen-search-input").show();
+  }
   $("input").focus(function(){
     if($('#get-info li.search-choice').length==2){
       $("#get-info .chosen-drop").hide();
@@ -325,3 +190,36 @@ $(".ico-location").click(function(){
 
 
 $(".month_year").datepicker();
+
+var content = [
+  { title: 'Andorra <span>1 tour package</span>' },
+  { title: 'United Arab Emirates'  },
+  { title: 'Afghanistan  <span>aa</span>' },
+  { title: 'Antigua' },
+  { title: 'Anguilla' },
+  { title: 'Albania' },
+  { title: 'Armenia' },
+  { title: 'Netherlands Antilles' },
+  { title: 'Angola' },
+  { title: 'Argentina' },
+  { title: 'American Samoa' },
+  { title: 'Austria' },
+  { title: 'Australia' },
+  { title: 'Aruba' },
+  { title: 'Aland Islands' },
+  { title: 'Azerbaijan' },
+  { title: 'Bosnia' },
+  { title: 'Barbados' },
+  { title: 'Bangladesh' },
+  { title: 'Belgium' },
+  { title: 'Burkina Faso' },
+  { title: 'Bulgaria' },
+  { title: 'Bahrain' },
+  { title: 'Burundi' }
+  // etc
+];
+$('.ui.search')
+  .search({
+    source: content
+  })
+;
