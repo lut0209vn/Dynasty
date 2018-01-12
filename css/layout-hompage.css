@@ -9,6 +9,7 @@ body {
 }
 
 #ModalSelectMap .modal-dialog {
+  width: 900px;
   position: relative;
   background: #FFF;
   padding-top: 27px;
@@ -30,6 +31,10 @@ body {
 #ModalSelectMap .modal-dialog .modal-header .close span {
   text-indent: 9999px;
 }
+#ModalSelectMap .modal-dialog .search-map {
+  width: 502px;
+  margin: 0 auto;
+}
 #ModalSelectMap .modal-dialog .search-map .ui.search {
   width: 502px;
 }
@@ -43,6 +48,8 @@ body {
   width: 502px;
   height: 42px;
   border: 1px solid #D7D7D7;
+  color: #1D1E1E;
+  line-height: 14px;
 }
 #ModalSelectMap .modal-dialog .search-map .ui.search .ui.icon.input .icon {
   position: absolute;
@@ -54,14 +61,18 @@ body {
   margin: 12px 0px 0px 11px;
 }
 #ModalSelectMap .modal-dialog .search-map .ui.search .results {
+  left: 30px;
+  padding: 0px 10px;
   width: 462px;
   border: 1px solid #D7D7D7;
   border-radius: 11px;
   background-color: #FFFFFF;
 }
 #ModalSelectMap .modal-dialog .search-map .ui.search .results a {
+  padding: 15px 10px;
   position: relative;
   overflow: visible;
+  z-index: 999;
 }
 #ModalSelectMap .modal-dialog .search-map .ui.search .results a:first-child:before {
   content: "";
@@ -78,11 +89,64 @@ body {
           transform: rotate(45deg);
   top: -5px;
   left: 10%;
+  z-index: 90;
+}
+#ModalSelectMap .modal-dialog .search-map .ui.search .results a:hover {
+  background: #FFF;
+}
+#ModalSelectMap .modal-dialog .search-map .ui.search .results a:hover .title {
+  color: #a02702;
+}
+#ModalSelectMap .modal-dialog .search-map .ui.search .results a:hover .title span {
+  color: #272828;
+}
+#ModalSelectMap .modal-dialog .search-map .ui.search .results a .title {
+  color: #00489F;
+  font-family: "Open Sans";
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 14px;
+}
+#ModalSelectMap .modal-dialog .search-map .ui.search .results a .title span {
+  float: right;
+  color: #272828;
+  font-family: "Open Sans";
+  font-size: 14px;
+  font-weight: 300;
+  text-align: right;
+}
+#ModalSelectMap .modal-dialog .popular-select {
+  padding-top: 17px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+#ModalSelectMap .modal-dialog .popular-select .inner {
+  display: inline-block;
+}
+#ModalSelectMap .modal-dialog .popular-select .inner p {
+  display: inline-block;
+  float: left;
+  margin: 0px;
+}
+#ModalSelectMap .modal-dialog .popular-select .inner span {
+  color: #004182;
+  font-family: "Open Sans";
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  line-height: 14px;
+  text-transform: uppercase;
+  margin: 0px 20px;
 }
 #ModalSelectMap .modal-dialog .icon-close-map {
   position: absolute;
   right: 25px;
   top: 18px;
+}
+#ModalSelectMap .modal-dialog .modal-body #map-chart {
+  width: 800px;
+  height: 400px;
+  margin: 0 auto 15px auto;
 }
 
 .page-main {
@@ -115,6 +179,40 @@ body {
   margin-bottom: 0px;
   padding-right: 10px;
 }
+#search .skewed .li-outer .icon {
+  float: left;
+  margin: 4px 0px 0px 0px;
+}
+#search .skewed .li-outer input[type="text"] {
+  margin-left: 9px;
+  width: 120px;
+  font-size: 12px;
+  color: #083F95;
+  font-weight: 600;
+  border: none;
+  float: left;
+  margin-top: 3px;
+}
+#search .skewed .li-outer input[type="text"]::-webkit-input-placeholder {
+  font-size: 12px;
+  color: #083F95;
+  font-weight: 600;
+}
+#search .skewed .li-outer input[type="text"]::-moz-placeholder {
+  font-size: 12px;
+  color: #083F95;
+  font-weight: 600;
+}
+#search .skewed .li-outer input[type="text"]:-ms-input-placeholder {
+  font-size: 12px;
+  color: #083F95;
+  font-weight: 600;
+}
+#search .skewed .li-outer input[type="text"]::placeholder {
+  font-size: 12px;
+  color: #083F95;
+  font-weight: 600;
+}
 #search .skewed .li-outer:before {
   content: "";
   width: 2px;
@@ -134,6 +232,9 @@ body {
           box-shadow: 3px 0 5px -1px #cdcece;
 }
 #search .skewed .li-outer:first-child:before {
+  display: none;
+}
+#search .skewed .li-outer:last-child:before {
   display: none;
 }
 #search .skewed .li-outer .skewed-revert {
@@ -223,7 +324,7 @@ body {
 #search .select-map .ico-location {
   float: left;
   display: inline-block;
-  margin: 4px 9px 0px 0px;
+  margin: 4px 0px 0px 0px;
 }
 #search .select-map #get-info {
   float: left;
@@ -239,6 +340,9 @@ body {
   border: none;
   background: #FFF;
   padding: 0px;
+}
+#search .select-map #get-info .chosen-container .chosen-choices .chosen-search-input {
+  margin-top: 0px;
 }
 #search .select-map #get-info .chosen-container .chosen-choices .search-choice {
   margin: 0px;
@@ -308,30 +412,8 @@ body {
   color: #083F95;
   float: left;
 }
-#search .datepicker input[type="text"] {
-  font-size: 12px;
-  color: #083F95;
-  font-weight: 600;
-}
-#search .datepicker input[type="text"]::-webkit-input-placeholder {
-  font-size: 12px;
-  color: #083F95;
-  font-weight: 600;
-}
-#search .datepicker input[type="text"]::-moz-placeholder {
-  font-size: 12px;
-  color: #083F95;
-  font-weight: 600;
-}
-#search .datepicker input[type="text"]:-ms-input-placeholder {
-  font-size: 12px;
-  color: #083F95;
-  font-weight: 600;
-}
-#search .datepicker input[type="text"]::placeholder {
-  font-size: 12px;
-  color: #083F95;
-  font-weight: 600;
+#search .duration img {
+  float: left;
 }
 
 .ui-datepicker {
@@ -348,11 +430,6 @@ body {
 
 .ui-datepicker .ui-datepicker-prev span span, .ui-datepicker .ui-datepicker-next span {
   background: red;
-}
-
-#map-chart {
-  width: 500px;
-  height: 500px;
 }
 
 @-webkit-keyframes flipInX {

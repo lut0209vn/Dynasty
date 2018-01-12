@@ -112,7 +112,7 @@
               </div>
               <span class="destination"></span>
               <div id="get-info">
-                <select data-placeholder="destination" multiple class="chzn-select chosen-select-map" tabindex="1" style="visibility: hidden">
+                <select data-placeholder="Destination" multiple class="chzn-select chosen-select-map" tabindex="1" style="visibility: hidden">
                   <option value=""></option>
                   <option>American</option>
                   <option>Malaysia</option>
@@ -120,14 +120,26 @@
                   <option>Giant Panda</option>
                 </select>
               </div><!-- #get-info -->
-              <img class="ico-add-location"src="images/ico-add-location.png" alt="">
+              <img class="ico-add-location icon"src="images/ico-add-location.png" alt="">
             </div><!-- .select-map -->
           </li>
           <li class="clearfix li-outer">
             <div class="datepicker skewed-revert">
-              <img src="images/ico-datepicker.png" alt="">
+              <img src="images/ico-datepicker.png" alt="" class="icon">
               <input type="text" class="month_year" placeholder="Date">
             </div><!-- .datepicker -->
+          </li>
+          <li class="clearfix li-outer">
+            <div class="duration skewed-revert">
+              <img src="images/ico-duration.png" alt="" class="icon">
+              <input type="text" name="" value="" placeholder="Duration">
+            </div>
+          </li>
+          <li class="clearfix li-outer">
+            <div class="budget skewed-revert">
+              <img src="images/ico-coin.png" alt="" class="icon">
+              <input type="text" name="" value="" placeholder="Budget (SGD)">
+            </div>
           </li>
         </ul>
       </form>
@@ -483,38 +495,36 @@
 <div class="modal fade" id="ModalSelectMap" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-header">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true"><img src="images/ico-close-map.png" alt=""></span>
-        </button>
-        <div class="search-map">
-          <div class="ui search">
-            <div class="ui icon input">
-              <span class="icon"><img src="images/ico-search-map.png" alt=""></span>
-              <input class="prompt" type="text" placeholder="Search countries...">
-            </div>
-            <div class="results"></div>
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true"><img src="images/ico-close-map.png" alt=""></span>
+      </button>
+      <div class="search-map">
+        <div class="ui search">
+          <div class="ui icon input">
+            <span class="icon"><img src="images/ico-search-map.png" alt=""></span>
+            <input class="prompt" type="text" placeholder="Search countries...">
           </div>
-        </div><!-- .search-map -->
-        <div class="popular-select">
-          <span class="title">Popular destinations</span>
+          <div class="results"></div>
+        </div>
+      </div><!-- .search-map -->
+      <div class="popular-select">
+        <div class="inner">
+          <p>Popular destinations</p>
           <span>Korea</span>
           <span>Taiwan</span>
           <span>China</span>
           <span>Hong Kong</span>
           <span>Dubai</span>
-        </div><!-- .popular-select -->
-      </div><!-- .modal-header -->
-      <div class="modal-body">
-        <div id="map-chart"></div><!-- #map-chart -->
-      </div>
+        </div><!-- .inner -->
+      </div><!-- .popular-select -->
     </div><!-- .modal-header -->
+    <div class="modal-body">
+      <div id="map-chart"></div><!-- #map-chart -->
+    </div>
   </div>
 </div>
 
 <!-- /.page-main -->
-
-
 
 <footer class="page-footer">
   
