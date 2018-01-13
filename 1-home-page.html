@@ -24,6 +24,7 @@
   <link  href="css/style.css" rel="stylesheet" media="screen">
   <link  href="css/layout-hompage.css" rel="stylesheet" media="screen">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
   <script src="vendor/initializr/modernizr-2.8.3-respond-1.4.2.min.js"></script>
 </head>
 <body>
@@ -58,22 +59,22 @@
 			</button>
 		</div>
     <div class="nav-main clearfix">
-      <ul class="nav-left nav navbar-nav">
-        <li><a href="#">Tours</a></li>
-        <li><a href="#">Free & Easy</a></li>
-        <li><a href="#">Cruise</a></li>
-        <li><a href="#">Hotels</a></li>
-        <li><a href="#">Flights</a></li>
+      <ul class="nav-left">
+        <li><span><a href="#">Tours</a></span></li>
+        <li><span><a href="#">Free & Easy</a></span></li>
+        <li><span><a href="#">Cruise</a></span></li>
+        <li><span><a href="#">Hotels</a></span></li>
+        <li><span><a href="#">Flights</a></span></li>
       </ul><!--.nav-left -->
-      <ul class="nav-right nav navbar-nav">
-        <li><a href="#">Jr Pass</a></li>
-        <li><a href="#">Store</a></li>
-        <li><a href="#">Rewards</a></li>
+      <ul class="nav-right">
+        <li><span><a href="#">Jr Pass</a></span></li>
+        <li><span><a href="#">Store</a></span></li>
+        <li><span><a href="#">Rewards</a></span></li>
         <li class="ctn-login">
-          <a class="signup" href="#">Sign Up</a>
-          <a class="login" href="#">Login</a>
+          <span><a class="signup" href="#">Sign Up</a></span>
+          <span><a class="login" href="#">Login</a></span>
         </li>
-        <li><a class="cart" href="#"><img src="images/icon-shopping.png" alt=""><span>Cart</span></a></li>
+        <li><span><a class="cart" href="#"><img src="images/icon-shopping.png" alt="">Cart</a></span></li>
       </ul><!-- .nav-right -->
     </div><!-- .nav-main -->
     <div class="logo">
@@ -87,7 +88,7 @@
 <main class="page-main">
   <section id="search">
     <div class="container">
-      <form class="search-form" action="index.html" method="post">
+      <form class="search-form clearfix" action="index.html" method="post">
         <ul class="skewed clearfix">
           <li class="li-outer">
             <div class="search-tours skewed-revert">
@@ -142,9 +143,15 @@
             </div>
           </li>
         </ul>
+        <span class="view-all">View All</span>
       </form>
     </div><!-- .container -->
   </section><!-- #search -->
+  <div class="md-title">
+    <div class="container">
+      <h1>Our <span>recommendations</span></h1>
+    </div><!-- .container -->
+  </div><!-- .md-title -->
   <section id="slider1" class="container clearfix">
     <div class="slider1 owl-carousel owl-control">
       <div class="item-slider-1 item">
@@ -270,7 +277,7 @@
     </div><!-- .md-slider-1 -->
   </section><!-- #slider1 -->
   <section id="slider2" class="container clearfix">
-    <div class="slider2 owl-carousel">
+    <div class="slider2 owl-carousel  owl-theme">
       <div class="item-slider-2 item">
           <div class="inner">
             <div class="thumb-nail">

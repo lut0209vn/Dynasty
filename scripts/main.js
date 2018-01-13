@@ -79,16 +79,37 @@ $('.slider1').owlCarousel({
   nav:false,
   items:1,
   nav:true,
+  responsive : {
+  0 : {
+    stagePadding: 50,
+  },
+  480 : {
+    stagePadding: 70,
+  },
+  768 : {
+    stagePadding: 90,
+  }
+}
 });
 $('.slider2').owlCarousel({
     stagePadding: 150,
-    smartSpeed:200,
+    smartSpeed:300,
     loop:true,
     margin:10,
     nav:false,
     items:1,
-    nav:true,
-
+    dots: true,
+    responsive : {
+    0 : {
+      stagePadding: 50,
+    },
+    480 : {
+      stagePadding: 70,
+    },
+    768 : {
+      stagePadding: 90,
+    }
+  }
 });
 $('.slider3').owlCarousel({
   stagePadding: 60,
@@ -98,6 +119,29 @@ $('.slider3').owlCarousel({
   nav:false,
   items:3,
   nav:true,
+  responsive : {
+  0 : {
+    stagePadding: 50,
+    items:2,
+  },
+  480 : {
+    stagePadding: 40,
+    items:2,
+  },
+  768 : {
+    stagePadding: 50,
+    items:2,
+  },
+  992 : {
+    stagePadding: 90,
+    items:3,
+    stagePadding: 50,
+  },
+  1150 : {
+    stagePadding: 90,
+    items:3,
+  }
+}
 });
 
 /* ==========================================================================
